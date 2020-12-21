@@ -1,12 +1,14 @@
 package algorithms.sort;
 
+import java.util.Arrays;
+
 public class InsertionSort {
 
     public int[] sort(int[] arr) {
         if (arr.length <= 1) {
             return arr;
         }
-        for (int i = 1; i < arr.length; ++i) {
+        for (int i = 1; i < arr.length; i++) {
             int key = arr[i];
             int j = i - 1;
             while (j >= 0 && arr[j] > key) {

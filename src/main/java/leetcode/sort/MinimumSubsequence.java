@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order/
 public class MinimumSubsequence {
 
-    // https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order/
     public List<Integer> minSubsequence(int[] nums) {
         Arrays.sort(nums);
         List<Integer> list = new ArrayList<>();
