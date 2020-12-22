@@ -1,4 +1,4 @@
-package leetcode.sort;
+package leetcode.todo;
 
 // https://leetcode.com/problems/sort-list/
 public class SortList {

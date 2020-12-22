@@ -1,4 +1,4 @@
-package leetcode.string;
+package leetcode.todo;
 
 // https://leetcode.com/problems/longest-common-prefix/
 public class LargestCommonPrefix {

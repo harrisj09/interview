@@ -1,4 +1,4 @@
-package leetcode.math;
+package leetcode.string;
 
 // https://leetcode.com/problems/add-strings/
 public class AddStrings {

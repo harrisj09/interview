@@ -1,4 +1,4 @@
-package leetcode.dynamicprogramming;
+package leetcode.todo;
 
 public class MinimumPathSum {
     // https://leetcode.com/problems/minimum-path-sum/
