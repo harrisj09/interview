@@ -7,7 +7,7 @@ public class SumOfDigits {
         if(n < 10) {
             return n;
         }
-        for(int i = n; i > 0; i/=10) {
+        for(int i = n; i > 0; i /= 10) {
             sum += i % 10;
         }
         return digital_root(sum);
