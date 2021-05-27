@@ -1,36 +1,37 @@
 package leetcode.search;
 
-//
+// https://leetcode.com/problems/first-bad-version/
 public class FirstBadVersion {
 
-
     static class VersionControl {
+        int badVersion = 751;
         public boolean isBadVersion(int version) {
-            return false;
+            return version >= badVersion;
         }
     }
     static class Solution extends VersionControl {
+
         public int firstBadVersion(int n) {
-            int low = 0;
-            int high = n;
-            int midpoint= (high + low) / 2;
-            int badIndexLeft = binarySearch(low, midpoint);
-            int badIndexRight = binarySearch(midpoint + 1, high);
-            if(badIndexLeft != -1) {
-                return badIndexLeft;
-            }
-            return badIndexRight;
+            return search(1, n);
         }
 
-        public int binarySearch(int low, int high) {
-            int midpoint = (low + high) / 2;
-            if(isBadVersion(midpoint)) {
-                return midpoint;
+        public int search(int i, int j){
+            int n = i + (j - i) / 2;
+            if(i >= j) {
+                return i;
             }
-            if(low >= high) {
-                return -1;
+            if(isBadVersion(n)) {
+                return search(i, n);
+            } else {
+                return search(n + 1, j);
             }
-            return Math.max(binarySearch(low, midpoint), binarySearch(midpoint + 1, high));
+        }
+    }
+
+    static class Main {
+        public static void main(String[] args) {
+            Solution solution = new Solution();
+            System.out.println(solution.firstBadVersion(100000));
         }
     }
 }

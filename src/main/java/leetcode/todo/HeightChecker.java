@@ -1,4 +1,4 @@
-package leetcode.datastructures;
+package leetcode.todo;
 
 // https://leetcode.com/problems/height-checker/
 public class HeightChecker {

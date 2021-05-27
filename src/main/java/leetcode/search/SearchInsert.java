@@ -1,16 +1,13 @@
 package leetcode.search;
 
+// https://leetcode.com/problems/search-insert-position/
 public class SearchInsert {
-
-    public static void main(String[] args) {
-        System.out.println(searchInsert(new int[]{1, 2, 5, 7}, 3));
-    }
 
     public static int searchInsert(int[] nums, int target) {
         int low = 0;
         int high = nums.length - 1;
         int midpoint;
-        while (low < high) {
+        while (low <= high) {
             midpoint = (low + high) / 2;
             if(nums[midpoint] == target) {
                 return midpoint;
